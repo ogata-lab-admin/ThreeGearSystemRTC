@@ -19,6 +19,9 @@
 #include <rtm/idl/ExtendedDataTypesSkel.h>
 #include <rtm/idl/InterfaceDataTypesSkel.h>
 
+//using handtrackingclient
+#include "ThreeGearBase.h"
+
 // Service implementation headers
 // <rtc-template block="service_impl_h">
 
@@ -37,9 +40,10 @@ using namespace RTC;
  *
  */
 class ThreeGearSystemRTC
-  : public RTC::DataFlowComponentBase
+  : public RTC::DataFlowComponentBase, public ThreeGearBase
 {
  public:
+
   /*!
    * @brief constructor
    * @param manager Maneger Object

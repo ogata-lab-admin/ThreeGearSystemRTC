@@ -9,6 +9,7 @@
 
 #include "ThreeGearSystemRTC.h"
 
+
 // Module specification
 // <rtc-template block="module_spec">
 static const char* threegearsystemrtc_spec[] =
@@ -105,12 +106,14 @@ RTC::ReturnCode_t ThreeGearSystemRTC::onActivated(RTC::UniqueId ec_id)
 
 RTC::ReturnCode_t ThreeGearSystemRTC::onDeactivated(RTC::UniqueId ec_id)
 {
+
   return RTC::RTC_OK;
 }
 
 
 RTC::ReturnCode_t ThreeGearSystemRTC::onExecute(RTC::UniqueId ec_id)
 {
+
   return RTC::RTC_OK;
 }
 
