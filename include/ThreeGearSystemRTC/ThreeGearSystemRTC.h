@@ -273,6 +273,8 @@ class ThreeGearSystemRTC
   
   // </rtc-template>
 
+
+	 ThreeGearBase* m_pThreeGearBase;
 };
 
 

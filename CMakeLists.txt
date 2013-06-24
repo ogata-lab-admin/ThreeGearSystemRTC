@@ -44,6 +44,12 @@ set(INC_INSTALL_DIR
 set(SHARE_INSTALL_DIR
     "components/share/${PROJECT_NAME_LOWER}-${PROJECT_VERSION_MAJOR}")
 
+SET(BOOST_INCLUDE_PATH "C:/Program Files (x86)/boost/boost_1_50/include")
+SET(BOOST_LIBRARY_PATH "C:/Program Files (x86)/boost/boost_1_50/lib")
+
+SET(ASIO_INCLUDE_PATH "C:/Program Files (x86)/asio-1.4.8/include")
+SET(ASIO_LIBRARY_PATH "C:/Program Files (x86)/asio-1.4.8/lib")
+
 # Get necessary dependency information
 find_package(OpenRTM)
 if(${OpenRTM_FOUND})

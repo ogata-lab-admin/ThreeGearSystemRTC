@@ -35,10 +35,18 @@ class Rotation{
 
 class ThreeGearBase : public HandTrackingClient::HandTrackingListener, public Position, public Rotation{
 private:
+
+	//double m_data;
+
 	HandTrackingClient::Client _client;
 public:
+
 	virtual void handleEvent(const HandTrackingClient::HandTrackingMessage& message);
 	virtual void handleConnectionClosed(){ };
 	ThreeGearBase(void);
 	~ThreeGearBase(void);
+
+
+//public:
+	//double getData() {return m_data;}
 };

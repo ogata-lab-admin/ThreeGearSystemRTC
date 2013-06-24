@@ -1,4 +1,4 @@
-set(hdrs ThreeGearSystemRTC.h HandTrackingClient.h HandTrackingListener.h HandTrackingMessage.h Threads.h ThreeGearBase.h
+set(hdrs ThreeGearSystemRTC.h
     PARENT_SCOPE
     )
 

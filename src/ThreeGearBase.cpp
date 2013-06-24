@@ -37,6 +37,13 @@ float Rotation::GetRotationV_Y(){ return this->v_y; }
 
 float Rotation::GetRotationV_Z(){ return this->v_z; }
 
+void Rotation::SetRotation(float w, float v_x, float v_y, float v_z){
+	this->w=(float)w;
+	this->v_x=(float)v_x;
+	this->v_y=(float)v_y;
+	this->v_z=(float)v_z;
+}
+
 ThreeGearBase::ThreeGearBase(){
 	Position handPosition();
 	Rotation handRotatins();
@@ -63,7 +70,6 @@ void ThreeGearBase::handleEvent(const HandTrackingClient::HandTrackingMessage& b
 		this->SetPosition(state.getPosition().x, state.getPosition().y, state.getPosition().z);
 		this->SetRotation(state.getRotation().w, state.getRotation().v.x, state.getRotation().v.y, state.getRotation().v.z);
 	}
-	
 }
 
 

@@ -8,7 +8,7 @@
  */
 
 #include "ThreeGearSystemRTC.h"
-
+#include <iostream>
 
 // Module specification
 // <rtc-template block="module_spec">
@@ -100,20 +100,22 @@ RTC::ReturnCode_t ThreeGearSystemRTC::onShutdown(RTC::UniqueId ec_id)
 
 RTC::ReturnCode_t ThreeGearSystemRTC::onActivated(RTC::UniqueId ec_id)
 {
+	m_pThreeGearBase = new ThreeGearBase();
   return RTC::RTC_OK;
 }
 
 
 RTC::ReturnCode_t ThreeGearSystemRTC::onDeactivated(RTC::UniqueId ec_id)
 {
-
+	delete m_pThreeGearBase;
   return RTC::RTC_OK;
 }
 
 
 RTC::ReturnCode_t ThreeGearSystemRTC::onExecute(RTC::UniqueId ec_id)
 {
-
+	std::cout <<  << "position is " << m_pThreeGearBase->GetPositionX() << ", " << m_pThreeGearBasse->GetPosotionY() << m_pThreeGearBase->GetPositionZ() << ", rotation is " << m_pThreeGearBase->GetRotationW() << ", axis vecor is " << m_pThreeGearBase->GetRotationV_X() << ", " << m_pThreeGearBasse->GetRotationV_Y() << m_pThreeGearBase->GetRotationV_Z() << std::endl;
+	
   return RTC::RTC_OK;
 }
 
