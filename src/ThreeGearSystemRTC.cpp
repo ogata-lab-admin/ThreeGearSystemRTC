@@ -114,8 +114,18 @@ RTC::ReturnCode_t ThreeGearSystemRTC::onDeactivated(RTC::UniqueId ec_id)
 
 RTC::ReturnCode_t ThreeGearSystemRTC::onExecute(RTC::UniqueId ec_id)
 {
-	std::cout <<  << "position is " << m_pThreeGearBase->GetPositionX() << ", " << m_pThreeGearBasse->GetPosotionY() << m_pThreeGearBase->GetPositionZ() << ", rotation is " << m_pThreeGearBase->GetRotationW() << ", axis vecor is " << m_pThreeGearBase->GetRotationV_X() << ", " << m_pThreeGearBasse->GetRotationV_Y() << m_pThreeGearBase->GetRotationV_Z() << std::endl;
-	
+	//std::cout << "position is " << m_pThreeGearBase->GetPositionX() << ", " << m_pThreeGearBase->GetPositionY() << m_pThreeGearBase->GetPositionZ() << ", rotation is " << m_pThreeGearBase->GetRotationW() << ", axis vecor is " << m_pThreeGearBase->GetRotationV_X() << ", " << m_pThreeGearBase->GetRotationV_Y() << m_pThreeGearBase->GetRotationV_Z() << std::endl;
+	float m_rotation;
+	m_rotation=m_pThreeGearBase->GetRotationW();
+
+	//int deg = (int)m_rotation*1000;
+	//std::cout << m_rotation*100 <<std::endl;
+
+
+
+	m_handRotation.data=m_rotation;
+	m_handRotationOut.write();
+
   return RTC::RTC_OK;
 }
 
